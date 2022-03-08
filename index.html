@@ -66,10 +66,10 @@ function copy() {
   var dh = document.getElementById("dhField").value;
   
 var canvas1  = document.getElementById("canvas1");
-var context1 = canvas4.getContext('2d');
+var context1 = canvas1.getContext('2d');
  
 var canvas2  = document.getElementById("canvas2");
-var context2 = canvas4.getContext('2d');
+var context2 = canvas2.getContext('2d');
   
         var imgData = context1.getImageData(sx, sy, sw, sh);
         context2.putImageData(imgData, dx, dy, dw, dh);
