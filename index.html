@@ -8,12 +8,58 @@
   
 <body>
 
-<canvas id="canvas" width="100" height="100" style="border:solid black 50px;">
+<input type="file" name="file" id="file"> <br>
+  <input type="number" placeholder="sx" id="sxField">
+  <input type="number" placeholder="sy" id="syField">
+  <input type="number" placeholder="sw" id="swField">
+  <input type="number" placeholder="sh" id="shField"> <br>
+  <input type="number" placeholder="dx" id="dxField">
+  <input type="number" placeholder="dy" id="dyField">
+  <input type="number" placeholder="dw" id="dwField">
+  <input type="number" placeholder="dh" id="dhField"> <br>
+<button onclick = "Upload()"> Button </button>
+<button onclick = "Copy()"> Button </button>
+<button onclick = "Download()"> Button </button>
+  
+<canvas id="canvas1" width="1080" height="2400" style="border:solid black 1px;">
   Your browser does not support canvas element.
+</canvas>
+  
+<canvas id="canvas2" width="1080" height="2400" style="border:solid black 1px;">
 </canvas>
   
 <script>
   
+function Upload() {
+var sx, sy, sw, sh, dx, dy, dw, dh ;
+var canvas1  = document.getElementById("canvas1");
+var context1 = canvas4.getContext('2d');
+var file1 = document.getElementById("file").files[0] ;
+  
+  var image1 = new Image();
+        // image1.src = 'Turbo-Snail-icon.png';
+        image1.src = URL.createObjectURL(file4);
+        image1.onload = function (e) {
+          context1.drawImage(image1, 0, 0, 120, 120);
+        };
+     }
+ }
+  
+function Copy() {
+var canvas1  = document.getElementById("canvas1");
+var context1 = canvas4.getContext('2d');
+ 
+var canvas2  = document.getElementById("canvas2");
+var context2 = canvas4.getContext('2d');
+  
+        var imgData = context1.getImageData(10, 10, 20, 20);
+        context2.putImageData(imgData, 200, 10, 40, 50);
+ }
+        
+function Download() {
+  
+ }
+ 
 </script>
   
 <script>
