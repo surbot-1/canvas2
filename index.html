@@ -30,7 +30,7 @@
 </canvas>
   
 <script>
-alert('1');
+alert('1'); var context ;
 function upload() {
   
   var sx = document.getElementById("sxField").value; 
@@ -39,7 +39,7 @@ function upload() {
   var sh = document.getElementById("shField").value; 
  
 var canvas1  = document.getElementById("canvas1");
-var context1 = canvas1.getContext('2d');
+var context1 = canvas1.getContext('2d'); context = context1 ;
 var file1 = document.getElementById("file").files[0] ;
   
   var image1 = new Image();
@@ -70,7 +70,7 @@ var context1 = canvas1.getContext('2d');
  
 var canvas2  = document.getElementById("canvas2");
 var context2 = canvas2.getContext('2d');
-  
+        context1 = context ;
         var imgData = context1.getImageData(0, 0, 100, 100);
         context1.putImageData(imgData, 200, 0, 100, 100);
  }
