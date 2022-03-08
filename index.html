@@ -30,7 +30,7 @@
 </canvas>
   
 <script>
-  
+alert('1');
 function upload() {
   
   var sx = document.getElementById("sxField").value; 
@@ -44,9 +44,9 @@ var file1 = document.getElementById("file").files[0] ;
   
   var image1 = new Image();
         image1.setAttribute('crossOrigin', 'anonymous');
-        image1.src = URL.createObjectURL(file4);
+        image1.src = URL.createObjectURL(file1);
         image1.onload = function (e) {
-          context1.drawImage(image1, sx, sy, sw, sh);
+          context1.drawImage(image1, 0, 0);
         };
      }
  }
