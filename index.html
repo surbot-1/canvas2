@@ -50,7 +50,10 @@ var file1 = document.getElementById("file").files[0] ;
         };
      }
  }
-  
+</script>
+ 
+<script>
+  alert('2');
 function copy() {
   
   var sx = document.getElementById("sxField").value; 
@@ -71,7 +74,10 @@ var context2 = canvas4.getContext('2d');
         var imgData = context1.getImageData(sx, sy, sw, sh);
         context2.putImageData(imgData, dx, dy, dw, dh);
  }
-        
+</script>
+  
+<script>
+ alert('3');
 function download() {
   
     let canvasImage = document.getElementById('canvas2').toDataURL('image/png');
