@@ -79,8 +79,8 @@ var file2 = document.getElementById("file").files[0] ;
         
   
      
-     var imgData = context1.getImageData(0, 0, sw, sh);
-     context2.putImageData(imgData, 0, 0);
+     var imgData = context1.getImageData(sx, sy, sw, sh);
+     context2.putImageData(imgData, dx, dy);
      
    };
  }
