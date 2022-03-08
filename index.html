@@ -70,8 +70,8 @@ var context1 = canvas1.getContext('2d');
  
 var canvas2  = document.getElementById("canvas2");
 var context2 = canvas2.getContext('2d');
-        var imageData = context1.createImageData(1000, 1000);
-        var imgData = context1.getImageData(0, 0, 100, 100);
+        var imgData = document.getElementById('canvas1') ;
+        // var imgData = context1.getImageData(0, 0, 100, 100);
         context1.putImageData(imgData, 200, 0, 100, 100);
  }
 </script>
