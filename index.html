@@ -8,7 +8,10 @@
   
 <body>
 
-<input type="file" name="file" id="file"> <br>
+<input type="file" name="file" id="file">
+<button onclick = "upload()"> Upload </button>
+<button onclick = "copy()"> Copy </button>
+<button onclick = "download()"> Download </button> <br>
   <input type="number" placeholder="sx" id="sxField">
   <input type="number" placeholder="sy" id="syField">
   <input type="number" placeholder="sw" id="swField">
@@ -16,21 +19,19 @@
   <input type="number" placeholder="dx" id="dxField">
   <input type="number" placeholder="dy" id="dyField">
   <input type="number" placeholder="dw" id="dwField">
-  <input type="number" placeholder="dh" id="dhField"> <br>
-<button onclick = "Upload()"> Button </button>
-<button onclick = "Copy()"> Button </button>
-<button onclick = "Download()"> Button </button>
+  <input type="number" placeholder="dh" id="dhField"> <br><br>
+
   
 <canvas id="canvas1" width="1080" height="2400" style="border:solid black 1px;">
   Your browser does not support canvas element.
 </canvas>
-  
+<br><br>
 <canvas id="canvas2" width="1080" height="2400" style="border:solid black 1px;">
 </canvas>
   
 <script>
   
-function Upload() {
+function upload() {
   
   var sx = document.getElementById("sxField").value; 
   var sy = document.getElementById("syField").value; 
@@ -50,7 +51,7 @@ var file1 = document.getElementById("file").files[0] ;
      }
  }
   
-function Copy() {
+function copy() {
   
   var sx = document.getElementById("sxField").value; 
   var sy = document.getElementById("syField").value; 
@@ -71,7 +72,7 @@ var context2 = canvas4.getContext('2d');
         context2.putImageData(imgData, dx, dy, dw, dh);
  }
         
-function Download() {
+function download() {
   
     let canvasImage = document.getElementById('canvas2').toDataURL('image/png');
     
